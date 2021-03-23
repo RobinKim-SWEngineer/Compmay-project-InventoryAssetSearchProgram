@@ -77,6 +77,7 @@
     </Compile>
     <Compile Include="Custom DataGridView Format\DataGridViewFormat.cs" />
     <Compile Include="DabaseConnection\DB_Configuration.cs" />
+    <Compile Include="Forms\IDataBaseConnection.cs" />
     <Compile Include="Forms\SemiFinishedInOutDetailForm.cs">
       <SubType>Form</SubType>
     </Compile>

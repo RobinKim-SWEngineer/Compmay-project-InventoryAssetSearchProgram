@@ -10,7 +10,7 @@ namespace PCZInventory.DabaseConnection
 {
     class DatabaseConnectionManager
     {
-        public static DataTable getQueryResult(Form caller, DataGridView dataGridView, QueryCommandModel queryCommandModel)
+        public static DataTable getQueryResult(Form caller, QueryCommandModel queryCommandModel)
         {
             using (SqlConnection sqlConnection = new SqlConnection(DB_Configuration.ConnectionString))
             {
@@ -32,7 +32,7 @@ namespace PCZInventory.DabaseConnection
                         sqlCommand.Parameters.Add(new SqlParameter("@stdmonth", SqlDbType.NVarChar, 6));
 
                         sqlCommand.Parameters["@stdmonth"].Value = queryCommandModel.dateTimePicker.Value.ToString("yyyyMM");
-
+                        
                         // When showing data in GridViewDetail, there must be additional arguments passed
                         if (!(queryCommandModel.userSelection is null))
                         {
